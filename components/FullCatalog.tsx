@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Release } from '../types';
-import { Music, Youtube, Pencil, Trash2, Plus, X, Check, Link as LinkIcon, Volume2 } from 'lucide-react';
+import { Pencil, Trash2, Plus, X, Check, Volume2 } from 'lucide-react';
+import { FaSpotify, FaApple, FaAmazon, FaYoutube } from 'react-icons/fa';
 
 interface FullCatalogProps {
   releases: Release[];
@@ -133,12 +134,22 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
                          <div className="flex gap-4">
                            {release.links?.spotify && (
                              <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#1DB954] hover:text-white rounded-full transition-colors text-white">
-                               <Music size={20} />
+                               <FaSpotify size={20} />
+                             </a>
+                           )}
+                           {release.links?.apple && (
+                             <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FA243C] hover:text-white rounded-full transition-colors text-white">
+                               <FaApple size={20} />
+                             </a>
+                           )}
+                           {release.links?.amazon && (
+                             <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FF9900] hover:text-white rounded-full transition-colors text-white">
+                               <FaAmazon size={20} />
                              </a>
                            )}
                            {release.links?.youtube && (
                              <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FF0000] hover:text-white rounded-full transition-colors text-white">
-                               <Youtube size={20} />
+                               <FaYoutube size={20} />
                              </a>
                            )}
                          </div>
@@ -219,43 +230,43 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
                           <label className="block text-xs font-bold text-cmh-mahogany mb-3 uppercase tracking-widest border-b border-cmh-mahogany/10 pb-2">Streaming Links</label>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                               <div className="relative">
-                                <Music size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
-                                <input 
-                                    type="text" 
+                                <FaSpotify size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
+                                <input
+                                    type="text"
                                     placeholder="Spotify URL"
-                                    value={editForm.links?.spotify || ''} 
+                                    value={editForm.links?.spotify || ''}
                                     onChange={(e) => handleLinkChange('spotify', e.target.value)}
                                     className="w-full bg-white text-cmh-mahogany border border-cmh-mahogany/20 p-2.5 pl-9 text-sm rounded-sm focus:border-[#1DB954] outline-none"
                                 />
                               </div>
                               <div className="relative">
-                                <Music size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
-                                <input 
-                                    type="text" 
+                                <FaApple size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
+                                <input
+                                    type="text"
                                     placeholder="Apple Music URL"
-                                    value={editForm.links?.apple || ''} 
+                                    value={editForm.links?.apple || ''}
                                     onChange={(e) => handleLinkChange('apple', e.target.value)}
                                     className="w-full bg-white text-cmh-mahogany border border-cmh-mahogany/20 p-2.5 pl-9 text-sm rounded-sm focus:border-[#FA243C] outline-none"
                                 />
                               </div>
                               <div className="relative">
-                                <Youtube size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
-                                <input 
-                                    type="text" 
+                                <FaYoutube size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
+                                <input
+                                    type="text"
                                     placeholder="YouTube URL"
-                                    value={editForm.links?.youtube || ''} 
+                                    value={editForm.links?.youtube || ''}
                                     onChange={(e) => handleLinkChange('youtube', e.target.value)}
                                     className="w-full bg-white text-cmh-mahogany border border-cmh-mahogany/20 p-2.5 pl-9 text-sm rounded-sm focus:border-[#FF0000] outline-none"
                                 />
                               </div>
                               <div className="relative">
-                                <LinkIcon size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
-                                <input 
-                                    type="text" 
+                                <FaAmazon size={14} className="absolute top-3.5 left-3 text-cmh-mahogany/40" />
+                                <input
+                                    type="text"
                                     placeholder="Amazon Music URL"
-                                    value={editForm.links?.amazon || ''} 
+                                    value={editForm.links?.amazon || ''}
                                     onChange={(e) => handleLinkChange('amazon', e.target.value)}
-                                    className="w-full bg-white text-cmh-mahogany border border-cmh-mahogany/20 p-2.5 pl-9 text-sm rounded-sm focus:border-cmh-gold outline-none"
+                                    className="w-full bg-white text-cmh-mahogany border border-cmh-mahogany/20 p-2.5 pl-9 text-sm rounded-sm focus:border-[#FF9900] outline-none"
                                 />
                               </div>
                           </div>

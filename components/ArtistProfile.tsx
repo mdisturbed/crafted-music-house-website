@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ARTISTS } from '../constants';
 import { Track, Release } from '../types';
-import { Play, Pause, ArrowLeft, Music, Youtube, Share2, Pencil, Save, X, Bold, Italic, Underline, Upload, Link as LinkIcon, Trash2, Plus, Check, Strikethrough, Quote } from 'lucide-react';
+import { Play, Pause, ArrowLeft, Share2, Pencil, Save, X, Bold, Italic, Underline, Upload, Trash2, Plus, Check, Strikethrough, Quote } from 'lucide-react';
+import { FaSpotify, FaApple, FaAmazon, FaYoutube } from 'react-icons/fa';
 
 interface ArtistProfileProps {
   artistId: string;
@@ -214,18 +215,6 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                 </button>
               </div>
 
-              {/* Stats */}
-              <div className="flex justify-between items-center border-t border-cmh-mahogany/10 pt-6">
-                <div className="text-sm font-sans tracking-widest uppercase text-cmh-mahogany/60">
-                   Monthly Listeners
-                   <span className="block text-xl text-cmh-mahogany font-serif font-bold mt-1">
-                     {(Math.random() * 500 + 100).toFixed(1)}k
-                   </span>
-                </div>
-                 <button className="flex items-center gap-2 text-cmh-mahogany hover:text-cmh-gold transition-colors">
-                   <Share2 size={18} /> <span className="text-xs font-bold uppercase tracking-widest">Share</span>
-                 </button>
-              </div>
             </div>
           </div>
 
@@ -336,10 +325,10 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                             
                             {/* Streaming Links - Visible to everyone */}
                             <div className="flex gap-3 opacity-60 hover:opacity-100 transition-opacity mr-4">
-                                {release.links?.spotify && <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#1DB954] transition-colors" title="Spotify"><Music size={18} /></a>}
-                                {release.links?.apple && <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FA243C] transition-colors" title="Apple Music"><Music size={18} /></a>}
-                                {release.links?.youtube && <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF0000] transition-colors" title="YouTube"><Youtube size={18} /></a>}
-                                {release.links?.amazon && <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-cmh-gold transition-colors" title="Amazon Music"><LinkIcon size={18} /></a>}
+                                {release.links?.spotify && <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#1DB954] transition-colors" title="Spotify"><FaSpotify size={18} /></a>}
+                                {release.links?.apple && <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FA243C] transition-colors" title="Apple Music"><FaApple size={18} /></a>}
+                                {release.links?.youtube && <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF0000] transition-colors" title="YouTube"><FaYoutube size={18} /></a>}
+                                {release.links?.amazon && <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF9900] transition-colors" title="Amazon Music"><FaAmazon size={18} /></a>}
                             </div>
 
                             {/* Admin Controls */}
@@ -397,43 +386,43 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                                 <label className="block text-xs font-bold text-cmh-mahogany mb-2 uppercase tracking-widest">Streaming Links</label>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                     <div className="relative">
-                                        <Music size={14} className="absolute top-3 left-3 text-gray-400" />
-                                        <input 
-                                            type="text" 
+                                        <FaSpotify size={14} className="absolute top-3 left-3 text-gray-400" />
+                                        <input
+                                            type="text"
                                             placeholder="Spotify URL"
-                                            value={editForm.links?.spotify || ''} 
+                                            value={editForm.links?.spotify || ''}
                                             onChange={(e) => handleLinkChange('spotify', e.target.value)}
                                             className="w-full bg-white border p-2 pl-9 text-sm rounded focus:border-[#1DB954] outline-none"
                                         />
                                     </div>
                                     <div className="relative">
-                                        <Music size={14} className="absolute top-3 left-3 text-gray-400" />
-                                        <input 
-                                            type="text" 
+                                        <FaApple size={14} className="absolute top-3 left-3 text-gray-400" />
+                                        <input
+                                            type="text"
                                             placeholder="Apple Music URL"
-                                            value={editForm.links?.apple || ''} 
+                                            value={editForm.links?.apple || ''}
                                             onChange={(e) => handleLinkChange('apple', e.target.value)}
                                             className="w-full bg-white border p-2 pl-9 text-sm rounded focus:border-[#FA243C] outline-none"
                                         />
                                     </div>
                                     <div className="relative">
-                                        <Youtube size={14} className="absolute top-3 left-3 text-gray-400" />
-                                        <input 
-                                            type="text" 
+                                        <FaYoutube size={14} className="absolute top-3 left-3 text-gray-400" />
+                                        <input
+                                            type="text"
                                             placeholder="YouTube URL"
-                                            value={editForm.links?.youtube || ''} 
+                                            value={editForm.links?.youtube || ''}
                                             onChange={(e) => handleLinkChange('youtube', e.target.value)}
                                             className="w-full bg-white border p-2 pl-9 text-sm rounded focus:border-[#FF0000] outline-none"
                                         />
                                     </div>
                                      <div className="relative">
-                                        <LinkIcon size={14} className="absolute top-3 left-3 text-gray-400" />
-                                        <input 
-                                            type="text" 
+                                        <FaAmazon size={14} className="absolute top-3 left-3 text-gray-400" />
+                                        <input
+                                            type="text"
                                             placeholder="Amazon Music URL"
-                                            value={editForm.links?.amazon || ''} 
+                                            value={editForm.links?.amazon || ''}
                                             onChange={(e) => handleLinkChange('amazon', e.target.value)}
-                                            className="w-full bg-white border p-2 pl-9 text-sm rounded focus:border-cmh-gold outline-none"
+                                            className="w-full bg-white border p-2 pl-9 text-sm rounded focus:border-[#FF9900] outline-none"
                                         />
                                     </div>
                                 </div>

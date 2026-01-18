@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Release } from '../types';
-import { Music, Youtube } from 'lucide-react';
+import { FaSpotify, FaApple, FaAmazon, FaYoutube } from 'react-icons/fa';
 
 interface DiscographyProps {
   onNavigate: (page: string) => void;
@@ -56,17 +56,22 @@ const Discography: React.FC<DiscographyProps> = ({ onNavigate, releases }) => {
                   <div className="flex gap-4">
                     {release.links.spotify && (
                       <a href={release.links.spotify} className="p-3 bg-white/10 hover:bg-[#1DB954] hover:text-white rounded-full transition-colors text-white">
-                        <Music size={20} />
+                        <FaSpotify size={20} />
                       </a>
                     )}
                     {release.links.apple && (
                       <a href={release.links.apple} className="p-3 bg-white/10 hover:bg-[#FA243C] hover:text-white rounded-full transition-colors text-white">
-                        <Music size={20} />
+                        <FaApple size={20} />
+                      </a>
+                    )}
+                    {release.links.amazon && (
+                      <a href={release.links.amazon} className="p-3 bg-white/10 hover:bg-[#FF9900] hover:text-white rounded-full transition-colors text-white">
+                        <FaAmazon size={20} />
                       </a>
                     )}
                     {release.links.youtube && (
                       <a href={release.links.youtube} className="p-3 bg-white/10 hover:bg-[#FF0000] hover:text-white rounded-full transition-colors text-white">
-                        <Youtube size={20} />
+                        <FaYoutube size={20} />
                       </a>
                     )}
                   </div>
