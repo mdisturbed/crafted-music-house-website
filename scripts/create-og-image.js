@@ -79,7 +79,7 @@ async function createOGImage() {
       })
     );
 
-    // Add logo (centered, lower position)
+    // Add logo (centered, positioned above artists)
     const logoPath = path.join(publicDir, 'logo-transparent.png');
     const logoSize = 120;
     const logoResized = await sharp(logoPath)
@@ -88,7 +88,7 @@ async function createOGImage() {
 
     const logoComposite = {
       input: logoResized,
-      top: 200,
+      top: 170,
       left: Math.floor((WIDTH - logoSize) / 2)
     };
 
