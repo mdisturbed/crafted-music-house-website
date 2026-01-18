@@ -80,11 +80,11 @@ export const ARTISTS: Artist[] = [
     avatar: '/images/artists/salvatore.png',
     description: 'Where restraint becomes romance. Salvatore brings the velvet-grain baritone of 1950s California lounges—silk suits, midnight bourbon, and a voice like aged leather.',
     demoTrack: {
-      title: 'Blue Skies',
+      title: 'After You Leave',
       artist: 'Salvatore Moretti',
-      src: '/audio/ruby_coffee-in-the-clouds_audio.mp3',
-      duration: '3:15',
-      coverArt: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?q=80&w=1000&auto=format&fit=crop'
+      src: '/audio/salvatore_after-you-leave_audio.mp3',
+      duration: '3:23',
+      coverArt: '/images/covers/after-the-applause.png'
     }
   }
 ];
@@ -158,6 +158,20 @@ export const RELEASES: Release[] = [
       apple: '',
       amazon: '',
       youtube: 'https://youtu.be/htWaPlSoUHc'
+    }
+  },
+  {
+    id: 'r6',
+    title: 'After the Applause',
+    artist: 'Salvatore Moretti',
+    coverArt: '/images/covers/after-the-applause.png',
+    year: '2025',
+    src: '/audio/salvatore_after-you-leave_audio.mp3',
+    links: {
+      spotify: '',
+      apple: '',
+      amazon: '',
+      youtube: ''
     }
   }
 ];
