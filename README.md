@@ -4,7 +4,7 @@
 
 Official website for Crafted Music House - An AI music production label creating vintage jazz, blues, and Americana through distinct artist personas.
 
-**Live Site:** https://mdisturbed.github.io/crafted-music-house-website/
+**Live Site:** https://craftedmusichouse.com
 
 ## Run Locally
 
