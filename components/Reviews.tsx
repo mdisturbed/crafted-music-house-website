@@ -5,21 +5,21 @@ import { Card, CardContent, CardFooter } from './ui/card';
 const REVIEWS = [
   {
     id: 1,
-    name: "Sarah Jenkins",
+    name: "Sarah J.",
     role: "Wedding Client",
     text: "We commissioned a custom song for our first dance. Salvatore's voice was hauntingly beautiful. Nobody believed it was AI-assisted; it felt so human.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Marcus Thorne",
+    name: "Marcus T.",
     role: "Music Critic",
     text: "I was skeptical about 'Crafted Music House' at first. But after listening to Sunny Boudreaux, I'm a believer. The texture, the crackle, the soul... it's all there.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Elena Rodriguez",
+    name: "Elena R.",
     role: "Birthday Gift",
     text: "Got a custom blues track for my dad's 60th. He cried. He literally cried. Best gift I've ever given. The process was smooth and the result was incredible.",
     rating: 5,
