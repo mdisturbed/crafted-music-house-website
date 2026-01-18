@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ArtistRoster from './components/ArtistRoster';
@@ -7,16 +7,18 @@ import Occasions from './components/Occasions';
 import About from './components/About';
 import Footer from './components/Footer';
 import MusicPlayer from './components/MusicPlayer';
-import Legal from './components/Legal';
-import FullCatalog from './components/FullCatalog';
-import Inquiry from './components/Inquiry';
-import PressKit from './components/PressKit';
-import ArtistProfile from './components/ArtistProfile';
 import AdminLoginModal from './components/AdminLoginModal';
 import Reviews from './components/Reviews';
 import Newsletter from './components/Newsletter';
 import { Track, Release } from './types';
 import { RELEASES } from './constants';
+
+// Code-split heavy components that aren't needed on initial load
+const Legal = lazy(() => import('./components/Legal'));
+const FullCatalog = lazy(() => import('./components/FullCatalog'));
+const Inquiry = lazy(() => import('./components/Inquiry'));
+const PressKit = lazy(() => import('./components/PressKit'));
+const ArtistProfile = lazy(() => import('./components/ArtistProfile'));
 
 const App: React.FC = () => {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
@@ -167,18 +169,24 @@ const App: React.FC = () => {
     <div className="bg-cmh-cream min-h-screen text-cmh-mahogany font-sans selection:bg-cmh-gold selection:text-cmh-mahogany">
       <Navbar onNavigate={handleNavigate} />
       <main>
-        {renderContent()}
+        <Suspense fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="animate-pulse text-cmh-gold text-xl">Loading...</div>
+          </div>
+        }>
+          {renderContent()}
+        </Suspense>
       </main>
-      
-      <Footer 
-        onNavigate={handleNavigate} 
-        isAdmin={isAdmin} 
-        onToggleAdmin={handleToggleAdmin} 
+
+      <Footer
+        onNavigate={handleNavigate}
+        isAdmin={isAdmin}
+        onToggleAdmin={handleToggleAdmin}
       />
-      
-      <MusicPlayer 
-        track={currentTrack} 
-        isPlaying={isPlaying} 
+
+      <MusicPlayer
+        track={currentTrack}
+        isPlaying={isPlaying}
         onTogglePlay={handleTogglePlay}
         onNext={() => console.log('Next track')}
         onPrev={() => console.log('Prev track')}
@@ -186,10 +194,10 @@ const App: React.FC = () => {
         onPlayTrack={handlePlayTrack}
       />
 
-      <AdminLoginModal 
-        isOpen={isLoginModalOpen} 
-        onClose={() => setIsLoginModalOpen(false)} 
-        onLogin={handleAdminLogin} 
+      <AdminLoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        onLogin={handleAdminLogin}
       />
     </div>
   );
