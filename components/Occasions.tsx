@@ -33,7 +33,7 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                         </div>
                         <div>
                             <h4 className="font-serif text-xl mb-1 text-cmh-cream">Weddings & Anniversaries</h4>
-                            <p className="text-sm text-gray-400">Capture your love story in a soulful ballad by Ruby James or a gentle acoustic track by Ezra Blue.</p>
+                            <p className="text-sm text-gray-400">Capture your love story in a soulful ballad by Ruby James or an intimate lounge track by Salvatore Moretti.</p>
                         </div>
                     </div>
                     <div className="flex gap-4">

@@ -146,7 +146,9 @@ const Inquiry: React.FC = () => {
                         <option value="sunny">Sunny Boudreaux (Jazz)</option>
                         <option value="ruby">Ruby James (Vocal Jazz)</option>
                         <option value="clyde">Clyde "Iron" Moss (Blues)</option>
-                        <option value="ezra">Ezra Blue (Soft Rock)</option>
+                        <option value="ashley">Ashley Wolfe (Americana Noir)</option>
+                        <option value="belladonna">Belladonna Vale (Gothic Cabaret)</option>
+                        <option value="salvatore">Salvatore Moretti (Lounge Jazz)</option>
                         <option value="custom">✨ Create Custom Persona (+${CUSTOM_ARTIST_FEE})</option>
                     </select>
                 </div>

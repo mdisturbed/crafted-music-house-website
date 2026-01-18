@@ -7,7 +7,7 @@ const REVIEWS = [
     id: 1,
     name: "Sarah Jenkins",
     role: "Wedding Client",
-    text: "We commissioned a custom song for our first dance. Ezra Blue's voice was hauntingly beautiful. Nobody believed it was AI-assisted; it felt so human.",
+    text: "We commissioned a custom song for our first dance. Salvatore's voice was hauntingly beautiful. Nobody believed it was AI-assisted; it felt so human.",
     rating: 5,
   },
   {
