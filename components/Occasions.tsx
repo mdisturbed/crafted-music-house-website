@@ -58,10 +58,10 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
             {/* Right Visuals */}
             <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" className="rounded-sm translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Wedding" />
-                    <img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?q=80&w=600&auto=format&fit=crop" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Celebration" />
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=600&auto=format&fit=crop" className="rounded-sm translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage microphone" />
+                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=600&auto=format&fit=crop" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Musician performing" />
                     <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Music writing" />
-                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop" className="rounded-sm -translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage mic" />
+                    <img src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?q=80&w=600&auto=format&fit=crop" className="rounded-sm -translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Recording studio" />
                 </div>
                 {/* Decorative border */}
                 <div className="absolute inset-0 border border-cmh-gold/20 m-4 pointer-events-none"></div>

@@ -2,9 +2,6 @@ import React from 'react';
 import { Artist, Release, SocialLink } from './types';
 import { FaSpotify, FaYoutube, FaInstagram, FaTiktok, FaTwitter } from 'react-icons/fa';
 
-// Using a free sample audio for demo purposes
-const DEMO_AUDIO = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
-
 export const ARTISTS: Artist[] = [
   {
     id: '1',
@@ -15,7 +12,7 @@ export const ARTISTS: Artist[] = [
     demoTrack: {
       title: 'Front Porch Sundays',
       artist: 'Louis "Sunny" Boudreaux',
-      src: DEMO_AUDIO,
+      src: '/audio/sunny_front-porch-sundays_audio.mp3',
       duration: '3:45',
       coverArt: '/images/covers/front-porch-sundays.png'
     }
@@ -29,7 +26,7 @@ export const ARTISTS: Artist[] = [
     demoTrack: {
       title: 'Skylarking at Midnight',
       artist: 'Ruby James',
-      src: DEMO_AUDIO,
+      src: '/audio/ruby_skylarking-at-midnight_audio.mp3',
       duration: '4:12',
       coverArt: '/images/covers/skylarking-at-midnight.png'
     }
@@ -43,7 +40,7 @@ export const ARTISTS: Artist[] = [
     demoTrack: {
       title: 'Rust Bucket Glory',
       artist: 'Clyde "Iron" Moss',
-      src: DEMO_AUDIO,
+      src: '/audio/clyde_rust-bucket-glory_audio.mp3',
       duration: '3:28',
       coverArt: '/images/covers/rust-bucket-glory.png'
     }
@@ -57,7 +54,7 @@ export const ARTISTS: Artist[] = [
     demoTrack: {
       title: 'Whiskey in the Wound',
       artist: 'Ashley Wolfe',
-      src: DEMO_AUDIO,
+      src: '/audio/ashley_whiskey-in-the-wound_audio.mp3',
       duration: '3:56',
       coverArt: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1000&auto=format&fit=crop'
     }
@@ -71,7 +68,7 @@ export const ARTISTS: Artist[] = [
     demoTrack: {
       title: 'Velvet & Thorns',
       artist: 'Belladonna Vale',
-      src: DEMO_AUDIO,
+      src: '/audio/sunny_front-porch-sundays_audio.mp3',
       duration: '4:05',
       coverArt: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?q=80&w=1000&auto=format&fit=crop'
     }
@@ -85,7 +82,7 @@ export const ARTISTS: Artist[] = [
     demoTrack: {
       title: 'Blue Skies',
       artist: 'Salvatore Moretti',
-      src: DEMO_AUDIO,
+      src: '/audio/ruby_coffee-in-the-clouds_audio.mp3',
       duration: '3:15',
       coverArt: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?q=80&w=1000&auto=format&fit=crop'
     }
@@ -99,11 +96,11 @@ export const RELEASES: Release[] = [
     artist: 'Clyde "Iron" Moss',
     coverArt: '/images/covers/rust-bucket-glory.png',
     year: '2025',
-    src: DEMO_AUDIO,
+    src: '/audio/clyde_rust-bucket-glory_audio.mp3',
     links: {
-      spotify: '#',
-      apple: '#',
-      amazon: '#',
+      spotify: 'https://open.spotify.com/artist/5xh3AkSuhQrE66vYbcBjYp',
+      apple: 'https://music.apple.com/us/artist/clyde-iron-moss/1862628399',
+      amazon: 'https://music.amazon.com/artists/B0G8VYYF15/clyde-iron-moss',
       youtube: 'https://youtu.be/WdfNFo8Miu8'
     }
   },
@@ -113,11 +110,11 @@ export const RELEASES: Release[] = [
     artist: 'Ruby James',
     coverArt: '/images/covers/skylarking-at-midnight.png',
     year: '2025',
-    src: DEMO_AUDIO,
+    src: '/audio/ruby_skylarking-at-midnight_audio.mp3',
     links: {
-      spotify: '#',
-      apple: '#',
-      amazon: '#',
+      spotify: 'https://open.spotify.com/album/2Fi3KLEhBKIfdMaGsjNEz4',
+      apple: 'https://music.apple.com/us/artist/ruby-james/1862630436',
+      amazon: 'https://music.amazon.com/artists/B0GCFX729G/ruby-james',
       youtube: 'https://youtu.be/5krvIhpB0lc'
     }
   },
@@ -127,11 +124,11 @@ export const RELEASES: Release[] = [
     artist: 'Louis "Sunny" Boudreaux',
     coverArt: '/images/covers/front-porch-sundays.png',
     year: '2025',
-    src: DEMO_AUDIO,
+    src: '/audio/sunny_front-porch-sundays_audio.mp3',
     links: {
-      spotify: '#',
-      apple: '#',
-      amazon: '#',
+      spotify: 'https://open.spotify.com/album/0IZPk9SRqsAkozbDgKCP0w',
+      apple: 'https://music.apple.com/us/artist/louis-sunny-boudreaux/1862628761',
+      amazon: 'https://music.amazon.com/artists/B0G8VZ6TL1/louis-\'sunny\'-boudreaux',
       youtube: 'https://youtu.be/ffSpcDaXYEU'
     }
   },
@@ -141,11 +138,11 @@ export const RELEASES: Release[] = [
     artist: 'Clyde "Iron" Moss',
     coverArt: '/images/covers/devils-in-the-details.png',
     year: '2025',
-    src: DEMO_AUDIO,
+    src: '/audio/clyde_devils-in-the-details_audio.mp3',
     links: {
-      spotify: '#',
-      apple: '#',
-      amazon: '#',
+      spotify: 'https://open.spotify.com/artist/5xh3AkSuhQrE66vYbcBjYp',
+      apple: 'https://music.apple.com/us/artist/clyde-iron-moss/1862628399',
+      amazon: 'https://music.amazon.com/artists/B0G8VYYF15/clyde-iron-moss',
       youtube: 'https://youtu.be/ga2iwMpe2hI'
     }
   },
@@ -155,11 +152,11 @@ export const RELEASES: Release[] = [
     artist: 'Ruby James',
     coverArt: '/images/covers/coffee-in-the-clouds.png',
     year: '2025',
-    src: DEMO_AUDIO,
+    src: '/audio/ruby_coffee-in-the-clouds_audio.mp3',
     links: {
-      spotify: '#',
-      apple: '#',
-      amazon: '#',
+      spotify: '',
+      apple: '',
+      amazon: '',
       youtube: 'https://youtu.be/htWaPlSoUHc'
     }
   }

@@ -13,10 +13,10 @@ interface ArtistRosterProps {
 // Map genres to broader "Vibes"
 const VIBES = [
   { id: 'all', label: 'All Voices' },
-  { id: 'nostalgic', label: 'Nostalgic', genres: ['1940s New Orleans Jazz', '1950s Chicago Vocal Jazz', '70s Soft Rock'] },
-  { id: 'moody', label: 'Dark & Moody', genres: ['Deep South Swamp Blues', 'Neon Noir Synthwave'] },
-  { id: 'ethereal', label: 'Dreamy', genres: ['Ethereal Dream Pop'] },
-  { id: 'energetic', label: 'Energetic', genres: ['Future Funk'] },
+  { id: 'nostalgic', label: 'Nostalgic', genres: ['1940s New Orleans Jazz', '1950s Chicago Vocal Jazz', 'Crooner, Lounge Jazz'] },
+  { id: 'moody', label: 'Dark & Moody', genres: ['Deep South Swamp Blues', 'Americana Noir', 'Gothic Cabaret'] },
+  { id: 'ethereal', label: 'Dreamy', genres: ['1950s Chicago Vocal Jazz', 'Crooner, Lounge Jazz'] },
+  { id: 'energetic', label: 'Energetic', genres: ['1940s New Orleans Jazz', 'Deep South Swamp Blues'] },
 ];
 
 const ArtistRoster: React.FC<ArtistRosterProps> = ({ onPlayTrack, currentTrack, isPlaying, onNavigate }) => {
