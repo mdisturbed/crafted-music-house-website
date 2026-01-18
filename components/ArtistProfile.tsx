@@ -172,10 +172,12 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
           <div className="lg:col-span-5">
             <div className="sticky top-32">
               <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl mb-8 group bg-gray-100">
-                <img 
-                  src={avatarUrl} 
-                  alt={artist.name} 
+                <img
+                  src={avatarUrl}
+                  alt={artist.name}
                   className="w-full h-full object-cover transition-transform duration-700"
+                  width="400"
+                  height="533"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cmh-mahogany/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                 
@@ -317,7 +319,7 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                       {/* View Mode */}
                       {editingReleaseId !== release.id && (
                           <>
-                            <img src={release.coverArt} alt={release.title} className="w-16 h-16 object-cover shadow-sm" />
+                            <img src={release.coverArt} alt={release.title} className="w-16 h-16 object-cover shadow-sm" width="64" height="64" />
                             <div className="flex-1">
                                 <h4 className="font-serif text-lg text-cmh-mahogany group-hover:text-cmh-gold transition-colors">{release.title}</h4>
                                 <span className="text-xs text-cmh-sepia uppercase tracking-widest">

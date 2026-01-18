@@ -104,10 +104,13 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
                    /* View Mode */
                    <>
                      <div className="relative aspect-square bg-cmh-cream mb-4 overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
-                       <img 
-                         src={release.coverArt} 
-                         alt={release.title} 
+                       <img
+                         src={release.coverArt}
+                         alt={release.title}
                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                         width="320"
+                         height="320"
+                         loading="lazy"
                        />
                        
                        {/* Admin Edit Overlay */}
@@ -283,7 +286,7 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
                           <span className="text-xs uppercase tracking-widest text-cmh-mahogany/40 mb-6">Live Preview</span>
                           <div className="w-64 bg-white p-6 shadow-2xl rounded-sm border border-gray-100">
                              <div className="aspect-square bg-gray-100 mb-6 overflow-hidden">
-                                <img src={editForm.coverArt} className="w-full h-full object-cover" alt="Preview" onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/400x400.png?text=No+Image')}/>
+                                <img src={editForm.coverArt} className="w-full h-full object-cover" alt="Preview" width="256" height="256" onError={(e) => (e.currentTarget.src = 'https://via.placeholder.com/400x400.png?text=No+Image')}/>
                              </div>
                              <div className="text-center">
                                <h3 className="font-serif text-xl text-cmh-mahogany leading-tight mb-2">{editForm.title || 'Track Title'}</h3>

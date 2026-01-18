@@ -98,7 +98,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
                                 onClick={() => handleSelectTrack(release)}
                                 className={`w-full flex items-center gap-3 p-3 hover:bg-white/10 transition-colors text-left border-b border-white/5 last:border-0 ${track?.title === release.title ? 'bg-cmh-gold/20' : ''}`}
                               >
-                                  <img src={release.coverArt} className="w-8 h-8 rounded-sm object-cover" alt="" />
+                                  <img src={release.coverArt} className="w-8 h-8 rounded-sm object-cover" alt="" width="32" height="32" />
                                   <div className="overflow-hidden">
                                       <div className={`text-sm font-serif truncate ${track?.title === release.title ? 'text-cmh-gold' : 'text-white'}`}>{release.title}</div>
                                       <div className="text-[10px] text-gray-400 truncate uppercase tracking-wide">{release.artist}</div>
@@ -115,10 +115,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
 
           {hasTrack ? (
             <div className="relative group shrink-0">
-               <img 
-                src={track.coverArt} 
-                alt={track.title} 
-                className={`w-12 h-12 md:w-14 md:h-14 object-cover shadow-lg border border-cmh-gold/20 rounded-sm ${isPlaying ? 'animate-[spin_6s_linear_infinite]' : ''}`} 
+               <img
+                src={track.coverArt}
+                alt={track.title}
+                className={`w-12 h-12 md:w-14 md:h-14 object-cover shadow-lg border border-cmh-gold/20 rounded-sm ${isPlaying ? 'animate-[spin_6s_linear_infinite]' : ''}`}
+                width="56"
+                height="56"
                />
             </div>
           ) : (

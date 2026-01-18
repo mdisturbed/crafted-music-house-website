@@ -44,10 +44,13 @@ const Discography: React.FC<DiscographyProps> = ({ onNavigate, releases }) => {
           {displayReleases.map((release) => (
             <div key={release.id} className="min-w-[280px] md:min-w-[320px] snap-center group cursor-pointer">
               <div className="relative aspect-square bg-cmh-cream mb-6 overflow-hidden shadow-lg">
-                <img 
-                  src={release.coverArt} 
-                  alt={release.title} 
+                <img
+                  src={release.coverArt}
+                  alt={release.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="320"
+                  height="320"
+                  loading="lazy"
                 />
                 
                 {/* Hover Links Overlay */}

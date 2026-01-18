@@ -12,6 +12,8 @@ const Logo: React.FC<LogoProps> = ({ className = "h-10 w-10" }) => {
       alt="Crafted Music House Logo"
       className={`${className} object-contain`}
       loading="eager"
+      width="40"
+      height="40"
     />
   );
 };
