@@ -41,7 +41,7 @@ async function createOGImage() {
     // Prepare artist images (6 artists in a row)
     const artistPaths = [
       path.join(publicDir, 'images/artists/sunny.webp'),
-      path.join(publicDir, 'images/artists/ruby.webp'),
+      path.join(publicDir, 'images/artists/ruby-clean.webp'),
       path.join(publicDir, 'images/artists/clyde.webp'),
       path.join(publicDir, 'images/artists/ashley.webp'),
       path.join(publicDir, 'images/artists/belladonna.webp'),
@@ -79,7 +79,7 @@ async function createOGImage() {
       })
     );
 
-    // Add logo (top center)
+    // Add logo (centered, lower position)
     const logoPath = path.join(publicDir, 'logo-transparent.png');
     const logoSize = 120;
     const logoResized = await sharp(logoPath)
@@ -88,7 +88,7 @@ async function createOGImage() {
 
     const logoComposite = {
       input: logoResized,
-      top: 60,
+      top: 200,
       left: Math.floor((WIDTH - logoSize) / 2)
     };
 
