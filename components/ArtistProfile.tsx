@@ -184,17 +184,17 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                 {/* Admin Image Edit Controls */}
                 {isAdmin && (
                     <div className="absolute top-4 right-4 flex flex-col gap-2 z-30">
-                        <button 
+                        <button
                             onClick={handleImageUploadTrigger}
                             className="w-10 h-10 bg-white text-cmh-mahogany rounded-full flex items-center justify-center shadow-lg hover:bg-cmh-gold hover:text-white transition-colors"
-                            title="Upload Image"
+                            aria-label="Upload image"
                         >
                             <Upload size={18} />
                         </button>
-                         <button 
+                         <button
                             onClick={handleImageLink}
                             className="w-10 h-10 bg-white text-cmh-mahogany rounded-full flex items-center justify-center shadow-lg hover:bg-cmh-gold hover:text-white transition-colors"
-                            title="Enter Image URL"
+                            aria-label="Enter image URL"
                         >
                             <LinkIcon size={18} />
                         </button>
@@ -209,9 +209,10 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                 )}
 
                 {/* Play Button Overlay */}
-                <button 
+                <button
                   onClick={() => onPlayTrack(artist.demoTrack)}
                   className="absolute bottom-8 right-8 w-16 h-16 bg-cmh-gold text-cmh-mahogany rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-white transition-all duration-300 z-20"
+                  aria-label={isArtistPlaying ? `Pause ${artist.name}` : `Play ${artist.name}`}
                 >
                    {isArtistPlaying ? <Pause size={24} fill="currentColor" /> : <Play size={24} fill="currentColor" className="ml-1" />}
                 </button>
@@ -249,19 +250,19 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                  <div className="bg-white border-2 border-cmh-gold rounded-lg overflow-hidden shadow-xl animate-fade-in">
                    {/* Editor Toolbar */}
                    <div className="bg-cmh-cream border-b border-cmh-gold/30 p-2 flex gap-2">
-                     <button onClick={() => execCmd('bold')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" title="Bold">
+                     <button onClick={() => execCmd('bold')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" aria-label="Bold">
                        <Bold size={18} />
                      </button>
-                     <button onClick={() => execCmd('italic')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" title="Italic">
+                     <button onClick={() => execCmd('italic')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" aria-label="Italic">
                        <Italic size={18} />
                      </button>
-                     <button onClick={() => execCmd('underline')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" title="Underline">
+                     <button onClick={() => execCmd('underline')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" aria-label="Underline">
                        <Underline size={18} />
                      </button>
-                     <button onClick={() => execCmd('strikethrough')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" title="Strikethrough">
+                     <button onClick={() => execCmd('strikethrough')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" aria-label="Strikethrough">
                        <Strikethrough size={18} />
                      </button>
-                     <button onClick={() => execCmd('formatBlock', 'blockquote')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" title="Blockquote">
+                     <button onClick={() => execCmd('formatBlock', 'blockquote')} className="p-2 hover:bg-cmh-gold/20 rounded text-cmh-mahogany" aria-label="Blockquote">
                        <Quote size={18} />
                      </button>
                    </div>
@@ -344,19 +345,19 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                             
                             {/* Streaming Links - Visible to everyone */}
                             <div className="flex gap-3 opacity-60 hover:opacity-100 transition-opacity mr-4">
-                                {release.links?.spotify && <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#1DB954] transition-colors" title="Spotify"><FaSpotify size={18} /></a>}
-                                {release.links?.apple && <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FA243C] transition-colors" title="Apple Music"><FaApple size={18} /></a>}
-                                {release.links?.youtube && <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF0000] transition-colors" title="YouTube"><FaYoutube size={18} /></a>}
-                                {release.links?.amazon && <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF9900] transition-colors" title="Amazon Music"><FaAmazon size={18} /></a>}
+                                {release.links?.spotify && <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#1DB954] transition-colors" aria-label={`Listen to ${release.title} on Spotify`}><FaSpotify size={18} /></a>}
+                                {release.links?.apple && <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FA243C] transition-colors" aria-label={`Listen to ${release.title} on Apple Music`}><FaApple size={18} /></a>}
+                                {release.links?.youtube && <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF0000] transition-colors" aria-label={`Watch ${release.title} on YouTube`}><FaYoutube size={18} /></a>}
+                                {release.links?.amazon && <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-2 hover:text-[#FF9900] transition-colors" aria-label={`Listen to ${release.title} on Amazon Music`}><FaAmazon size={18} /></a>}
                             </div>
 
                             {/* Admin Controls */}
                             {isAdmin && (
                                 <div className="flex gap-2 border-l pl-4 border-cmh-mahogany/10">
-                                    <button onClick={() => handleEditRelease(release)} className="p-2 text-gray-400 hover:text-cmh-gold transition-colors" title="Edit Release">
+                                    <button onClick={() => handleEditRelease(release)} className="p-2 text-gray-400 hover:text-cmh-gold transition-colors" aria-label={`Edit ${release.title}`}>
                                         <Pencil size={16} />
                                     </button>
-                                    <button onClick={() => handleDeleteReleaseLocal(release.id)} className="p-2 text-gray-400 hover:text-red-500 transition-colors" title="Delete Release">
+                                    <button onClick={() => handleDeleteReleaseLocal(release.id)} className="p-2 text-gray-400 hover:text-red-500 transition-colors" aria-label={`Delete ${release.title}`}>
                                         <Trash2 size={16} />
                                     </button>
                                 </div>
@@ -369,7 +370,7 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-4 rounded-lg">
                               <div className="col-span-full mb-2 border-b pb-2 text-xs font-bold uppercase tracking-widest text-cmh-gold flex justify-between items-center">
                                   <span>Editing Release</span>
-                                  <button onClick={() => setEditingReleaseId(null)} className="text-gray-400 hover:text-red-500"><X size={16}/></button>
+                                  <button onClick={() => setEditingReleaseId(null)} className="text-gray-400 hover:text-red-500" aria-label="Cancel editing"><X size={16}/></button>
                               </div>
                               
                               <div>

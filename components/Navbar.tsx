@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <button onClick={() => onNavigate('home')} className="flex items-center gap-3 group">
+            <button onClick={() => onNavigate('home')} className="flex items-center gap-3 group" aria-label="Crafted Music House - Return to home">
               <div className="text-cmh-mahogany group-hover:text-cmh-gold transition-colors duration-500">
                 <Logo className="h-10 w-10 md:h-12 md:w-12" />
               </div>
@@ -73,6 +73,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-cmh-mahogany hover:text-cmh-gold focus:outline-none"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

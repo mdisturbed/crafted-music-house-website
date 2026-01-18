@@ -116,17 +116,17 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
                        {/* Admin Edit Overlay */}
                        {isAdmin && (
                          <div className="absolute top-2 right-2 flex gap-2 z-20">
-                           <button 
+                           <button
                              onClick={() => handleEditRelease(release)}
                              className="bg-white/90 text-cmh-mahogany p-2 rounded-full hover:bg-cmh-gold hover:text-white transition-colors shadow-md"
-                             title="Edit"
+                             aria-label={`Edit ${release.title}`}
                            >
                              <Pencil size={16} />
                            </button>
-                           <button 
+                           <button
                              onClick={() => handleDelete(release.id)}
                              className="bg-white/90 text-red-500 p-2 rounded-full hover:bg-red-500 hover:text-white transition-colors shadow-md"
-                             title="Delete"
+                             aria-label={`Delete ${release.title}`}
                            >
                              <Trash2 size={16} />
                            </button>
@@ -136,22 +136,22 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
                        <div className="absolute inset-0 bg-cmh-mahogany/90 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                          <div className="flex gap-4">
                            {release.links?.spotify && (
-                             <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#1DB954] hover:text-white rounded-full transition-colors text-white">
+                             <a href={release.links.spotify} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#1DB954] hover:text-white rounded-full transition-colors text-white" aria-label={`Listen to ${release.title} on Spotify`}>
                                <FaSpotify size={20} />
                              </a>
                            )}
                            {release.links?.apple && (
-                             <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FA243C] hover:text-white rounded-full transition-colors text-white">
+                             <a href={release.links.apple} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FA243C] hover:text-white rounded-full transition-colors text-white" aria-label={`Listen to ${release.title} on Apple Music`}>
                                <FaApple size={20} />
                              </a>
                            )}
                            {release.links?.amazon && (
-                             <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FF9900] hover:text-white rounded-full transition-colors text-white">
+                             <a href={release.links.amazon} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FF9900] hover:text-white rounded-full transition-colors text-white" aria-label={`Listen to ${release.title} on Amazon Music`}>
                                <FaAmazon size={20} />
                              </a>
                            )}
                            {release.links?.youtube && (
-                             <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FF0000] hover:text-white rounded-full transition-colors text-white">
+                             <a href={release.links.youtube} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-[#FF0000] hover:text-white rounded-full transition-colors text-white" aria-label={`Watch ${release.title} on YouTube`}>
                                <FaYoutube size={20} />
                              </a>
                            )}

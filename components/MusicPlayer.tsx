@@ -88,7 +88,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
               <div className="absolute bottom-full left-0 mb-6 w-72 bg-cmh-mahogany/95 backdrop-blur-md border border-cmh-gold/20 rounded-lg shadow-2xl overflow-hidden animate-fade-in flex flex-col">
                   <div className="p-3 border-b border-cmh-gold/10 flex justify-between items-center bg-black/20">
                       <span className="text-xs font-bold uppercase tracking-widest text-cmh-gold">Select Track</span>
-                      <button onClick={() => setShowPlaylist(false)} className="text-white/50 hover:text-white"><X size={14}/></button>
+                      <button onClick={() => setShowPlaylist(false)} className="text-white/50 hover:text-white" aria-label="Close playlist"><X size={14}/></button>
                   </div>
                   <div className="max-h-64 overflow-y-auto custom-scrollbar">
                       {playableReleases.length > 0 ? (
@@ -142,10 +142,11 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
             </div>
             
             {/* Playlist Toggle Button */}
-            <button 
-                onClick={() => setShowPlaylist(!showPlaylist)} 
+            <button
+                onClick={() => setShowPlaylist(!showPlaylist)}
                 className={`p-1.5 rounded-full hover:bg-white/10 transition-colors ${showPlaylist ? 'text-cmh-gold bg-white/10' : 'text-white/60'}`}
-                title="View Playlist"
+                aria-label={showPlaylist ? "Hide playlist" : "Show playlist"}
+                aria-expanded={showPlaylist}
             >
                 <ListMusic size={18} />
             </button>
@@ -155,23 +156,26 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
         {/* Controls */}
         <div className="flex flex-col items-center w-1/3">
           <div className="flex items-center gap-4 md:gap-6 mb-1 bg-cmh-mahogany/30 backdrop-blur-sm px-4 py-1 rounded-full border border-white/5">
-            <button 
-                onClick={onPrev} 
+            <button
+                onClick={onPrev}
                 disabled={!hasTrack}
                 className={`text-cmh-cream/80 transition-colors ${hasTrack ? 'hover:text-cmh-gold' : 'opacity-30 cursor-not-allowed'}`}
+                aria-label="Previous track"
             >
               <SkipBack size={20} />
             </button>
-            <button 
-              onClick={hasTrack ? onTogglePlay : undefined} 
+            <button
+              onClick={hasTrack ? onTogglePlay : undefined}
               className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-transform shadow-lg ${hasTrack ? 'bg-cmh-gold text-cmh-mahogany hover:scale-105' : 'bg-cmh-gold/20 text-cmh-mahogany/50 cursor-not-allowed'}`}
+              aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-1" />}
             </button>
-            <button 
-                onClick={onNext} 
+            <button
+                onClick={onNext}
                 disabled={!hasTrack}
                 className={`text-cmh-cream/80 transition-colors ${hasTrack ? 'hover:text-cmh-gold' : 'opacity-30 cursor-not-allowed'}`}
+                aria-label="Next track"
             >
               <SkipForward size={20} />
             </button>

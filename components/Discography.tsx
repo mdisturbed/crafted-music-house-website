@@ -58,22 +58,22 @@ const Discography: React.FC<DiscographyProps> = ({ onNavigate, releases }) => {
                   <span className="text-xs font-sans text-cmh-cream uppercase tracking-widest">Listen On</span>
                   <div className="flex gap-4">
                     {release.links.spotify && (
-                      <a href={release.links.spotify} className="p-3 bg-white/10 hover:bg-[#1DB954] hover:text-white rounded-full transition-colors text-white">
+                      <a href={release.links.spotify} className="p-3 bg-white/10 hover:bg-[#1DB954] hover:text-white rounded-full transition-colors text-white" aria-label={`Listen to ${release.title} on Spotify`}>
                         <FaSpotify size={20} />
                       </a>
                     )}
                     {release.links.apple && (
-                      <a href={release.links.apple} className="p-3 bg-white/10 hover:bg-[#FA243C] hover:text-white rounded-full transition-colors text-white">
+                      <a href={release.links.apple} className="p-3 bg-white/10 hover:bg-[#FA243C] hover:text-white rounded-full transition-colors text-white" aria-label={`Listen to ${release.title} on Apple Music`}>
                         <FaApple size={20} />
                       </a>
                     )}
                     {release.links.amazon && (
-                      <a href={release.links.amazon} className="p-3 bg-white/10 hover:bg-[#FF9900] hover:text-white rounded-full transition-colors text-white">
+                      <a href={release.links.amazon} className="p-3 bg-white/10 hover:bg-[#FF9900] hover:text-white rounded-full transition-colors text-white" aria-label={`Listen to ${release.title} on Amazon Music`}>
                         <FaAmazon size={20} />
                       </a>
                     )}
                     {release.links.youtube && (
-                      <a href={release.links.youtube} className="p-3 bg-white/10 hover:bg-[#FF0000] hover:text-white rounded-full transition-colors text-white">
+                      <a href={release.links.youtube} className="p-3 bg-white/10 hover:bg-[#FF0000] hover:text-white rounded-full transition-colors text-white" aria-label={`Watch ${release.title} on YouTube`}>
                         <FaYoutube size={20} />
                       </a>
                     )}
