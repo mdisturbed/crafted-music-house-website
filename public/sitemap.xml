@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://craftedmusichouse.com/</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Catalog Page -->
+  <url>
+    <loc>https://craftedmusichouse.com/#catalog</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Artists Section -->
+  <url>
+    <loc>https://craftedmusichouse.com/#artists</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Occasions/Custom Songs -->
+  <url>
+    <loc>https://craftedmusichouse.com/#occasions</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://craftedmusichouse.com/#about</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Note: Individual artist pages are client-side routes (artist:1, artist:2, etc.)
+       and not directly indexable. Will improve in Phase 2 with prerendering or SSR. -->
+
+</urlset>

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Crawl-delay for aggressive bots
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Sitemap
+Sitemap: https://craftedmusichouse.com/sitemap.xml
