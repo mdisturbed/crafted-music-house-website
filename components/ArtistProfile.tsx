@@ -320,7 +320,24 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                             <img src={release.coverArt} alt={release.title} className="w-16 h-16 object-cover shadow-sm" />
                             <div className="flex-1">
                                 <h4 className="font-serif text-lg text-cmh-mahogany group-hover:text-cmh-gold transition-colors">{release.title}</h4>
-                                <span className="text-xs text-cmh-sepia uppercase tracking-widest">{release.year} • Single</span>
+                                <span className="text-xs text-cmh-sepia uppercase tracking-widest">
+                                  {release.year} • {release.type === 'album' ? `Album (${release.tracks?.length || 0} tracks)` : 'Single'}
+                                </span>
+
+                                {/* Album Track Listing */}
+                                {release.type === 'album' && release.tracks && (
+                                  <div className="mt-3 pl-2 border-l-2 border-cmh-gold/20">
+                                    <div className="space-y-1">
+                                      {release.tracks.map((track) => (
+                                        <div key={track.number} className="flex items-center gap-2 text-xs text-cmh-mahogany/60">
+                                          <span className="text-cmh-gold/60 font-mono w-4">{track.number}.</span>
+                                          <span className="flex-1">{track.title}</span>
+                                          <span className="text-cmh-sepia/40 font-mono text-[10px]">{track.duration}</span>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
                             </div>
                             
                             {/* Streaming Links - Visible to everyone */}

@@ -23,7 +23,13 @@ export interface Release {
   artist: string;
   coverArt: string;
   year: string;
+  type?: 'single' | 'album'; // Type of release
   src?: string; // Audio URL for playback
+  tracks?: Array<{ // Album track listing
+    number: number;
+    title: string;
+    duration: string;
+  }>;
   links: {
     spotify?: string;
     apple?: string;
