@@ -39,8 +39,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         </h1>
 
         <p className="text-cmh-mahogany/70 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-          We are a boutique music house blending human curation with machine creativity. 
-          Discover authentic, emotionally resonant soundscapes for the modern era.
+          An AI music production house bringing vintage jazz, blues, and Americana to life through
+          distinct artist personas. Where 1940s New Orleans meets deep South swamp blues.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
