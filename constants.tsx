@@ -7,49 +7,49 @@ export const ARTISTS: Artist[] = [
     id: '1',
     name: 'Louis "Sunny" Boudreaux',
     genre: '1940s New Orleans Jazz',
-    avatar: '/images/artists/sunny.png',
+    avatar: '/images/artists/sunny.webp',
     description: 'The golden trumpet of the Quarter. Sunny brings the warmth of 1940s New Orleans to life with raspy, world-weary vocals and soulful brass that echoes through bourbon-soaked nights.',
     demoTrack: {
       title: 'Front Porch Sundays',
       artist: 'Louis "Sunny" Boudreaux',
       src: '/audio/sunny_front-porch-sundays_audio.mp3',
       duration: '3:45',
-      coverArt: '/images/covers/front-porch-sundays.png'
+      coverArt: '/images/covers/front-porch-sundays.webp'
     }
   },
   {
     id: '2',
     name: 'Ruby James',
     genre: '1950s Chicago Vocal Jazz',
-    avatar: '/images/artists/ruby.png',
+    avatar: '/images/artists/ruby.webp',
     description: 'Velvet vocals from the Windy City. Ruby evokes the smoky glamour of 1950s supper clubs with silky phrasing and torch song sensibility.',
     demoTrack: {
       title: 'Skylarking at Midnight',
       artist: 'Ruby James',
       src: '/audio/ruby_skylarking-at-midnight_audio.mp3',
       duration: '4:12',
-      coverArt: '/images/covers/skylarking-at-midnight.png'
+      coverArt: '/images/covers/skylarking-at-midnight.webp'
     }
   },
   {
     id: '3',
     name: 'Clyde "Iron" Moss',
     genre: 'Deep South Swamp Blues',
-    avatar: '/images/artists/clyde.png',
+    avatar: '/images/artists/clyde.webp',
     description: 'Raw, gritty, and real. Clyde channels the spirits of the Delta with gravelly vocals, rusted resonator guitar, and stories carved from scrapyard iron.',
     demoTrack: {
       title: 'Rust Bucket Glory',
       artist: 'Clyde "Iron" Moss',
       src: '/audio/clyde_rust-bucket-glory_audio.mp3',
       duration: '3:28',
-      coverArt: '/images/covers/rust-bucket-glory.png'
+      coverArt: '/images/covers/rust-bucket-glory.webp'
     }
   },
   {
     id: '4',
     name: 'Ashley Wolfe',
     genre: 'Americana Noir',
-    avatar: '/images/artists/ashley.png',
+    avatar: '/images/artists/ashley.webp',
     description: 'The voice of the after-hours. Ashley sings for the desert highways and dive bars, with smoky alto vocals that sit with you in the dark and make it feel less lonely.',
     demoTrack: {
       title: 'Whiskey in the Wound',
@@ -63,7 +63,7 @@ export const ARTISTS: Artist[] = [
     id: '5',
     name: 'Belladonna Vale',
     genre: 'Gothic Cabaret',
-    avatar: '/images/artists/belladonna.png',
+    avatar: '/images/artists/belladonna.webp',
     description: 'Mistress of the midnight hour. Belladonna crafts theatrical confections of dark swing and cabaret drama—Halloween as a lifestyle, noir as a love language.',
     demoTrack: {
       title: 'Velvet & Thorns',
@@ -77,14 +77,14 @@ export const ARTISTS: Artist[] = [
     id: '6',
     name: 'Salvatore Moretti',
     genre: 'Crooner, Lounge Jazz',
-    avatar: '/images/artists/salvatore.png',
+    avatar: '/images/artists/salvatore.webp',
     description: 'Where restraint becomes romance. Salvatore brings the velvet-grain baritone of 1950s California lounges—silk suits, midnight bourbon, and a voice like aged leather.',
     demoTrack: {
       title: 'After You Leave',
       artist: 'Salvatore Moretti',
       src: '/audio/salvatore_after-you-leave_audio.mp3',
       duration: '3:23',
-      coverArt: '/images/covers/after-the-applause.png'
+      coverArt: '/images/covers/after-the-applause.webp'
     }
   }
 ];
@@ -94,7 +94,7 @@ export const RELEASES: Release[] = [
     id: 'r1',
     title: 'Rust Bucket Glory',
     artist: 'Clyde "Iron" Moss',
-    coverArt: '/images/covers/rust-bucket-glory.png',
+    coverArt: '/images/covers/rust-bucket-glory.webp',
     year: '2025',
     src: '/audio/clyde_rust-bucket-glory_audio.mp3',
     links: {
@@ -108,7 +108,7 @@ export const RELEASES: Release[] = [
     id: 'r2',
     title: 'Skylarking at Midnight',
     artist: 'Ruby James',
-    coverArt: '/images/covers/skylarking-at-midnight.png',
+    coverArt: '/images/covers/skylarking-at-midnight.webp',
     year: '2025',
     src: '/audio/ruby_skylarking-at-midnight_audio.mp3',
     links: {
@@ -122,7 +122,7 @@ export const RELEASES: Release[] = [
     id: 'r3',
     title: 'Front Porch Sundays',
     artist: 'Louis "Sunny" Boudreaux',
-    coverArt: '/images/covers/front-porch-sundays.png',
+    coverArt: '/images/covers/front-porch-sundays.webp',
     year: '2025',
     src: '/audio/sunny_front-porch-sundays_audio.mp3',
     links: {
@@ -136,7 +136,7 @@ export const RELEASES: Release[] = [
     id: 'r4',
     title: "Devil's in the Details",
     artist: 'Clyde "Iron" Moss',
-    coverArt: '/images/covers/devils-in-the-details.png',
+    coverArt: '/images/covers/devils-in-the-details.webp',
     year: '2025',
     src: '/audio/clyde_devils-in-the-details_audio.mp3',
     links: {
@@ -150,7 +150,7 @@ export const RELEASES: Release[] = [
     id: 'r5',
     title: 'Coffee in the Clouds',
     artist: 'Ruby James',
-    coverArt: '/images/covers/coffee-in-the-clouds.png',
+    coverArt: '/images/covers/coffee-in-the-clouds.webp',
     year: '2025',
     src: '/audio/ruby_coffee-in-the-clouds_audio.mp3',
     links: {
@@ -164,7 +164,7 @@ export const RELEASES: Release[] = [
     id: 'r6',
     title: 'After the Applause',
     artist: 'Salvatore Moretti',
-    coverArt: '/images/covers/after-the-applause.png',
+    coverArt: '/images/covers/after-the-applause.webp',
     year: '2025',
     type: 'album',
     src: '/audio/salvatore_after-you-leave_audio.mp3',
