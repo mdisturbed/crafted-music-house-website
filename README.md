@@ -148,11 +148,6 @@ site/
 - Genre and description
 - Streaming platform links
 
-### Admin Mode (Client-Side)
-- Secret admin toggle in footer (lock icon)
-- Default password: `crafted2025` or `admin`
-- Edit artist bios, upload images, manage releases
-- Changes are local to session (update `constants.tsx` for permanent changes)
 
 ---
 
