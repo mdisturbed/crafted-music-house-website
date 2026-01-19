@@ -8,10 +8,11 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background with texture */}
+      {/* Background with subtle texture */}
       <div className="absolute inset-0 bg-cmh-cream">
-        <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]"></div>
-        {/* Soft gradient orb */}
+        {/* CSS-only subtle texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(74, 44, 42, 0.05) 2px, rgba(74, 44, 42, 0.05) 4px)'}}></div>
+        {/* Soft gradient orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cmh-gold/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cmh-sepia/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/3"></div>
       </div>

@@ -20,16 +20,14 @@ const Newsletter: React.FC = () => {
     <section className="relative py-24 overflow-hidden group">
         {/* Background Layer */}
         <div className="absolute inset-0 bg-cmh-midnight">
-             {/* Image with heavy fade */}
-             <div 
-                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519683109079-d5f539e1542f?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-luminosity transition-transform duration-[20s] group-hover:scale-105"
-             ></div>
-             
+             {/* Radial gradient pattern instead of image */}
+             <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(201, 162, 39, 0.2) 0%, transparent 50%)'}}></div>
+
              {/* Gradient Overlays for readability */}
              <div className="absolute inset-0 bg-gradient-to-t from-cmh-midnight via-cmh-mahogany/90 to-cmh-midnight/80"></div>
-             
-             {/* Grain Texture */}
-             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+
+             {/* CSS noise texture */}
+             <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255,255,255,0.03) 1px, rgba(255,255,255,0.03) 2px), repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.03) 1px, rgba(255,255,255,0.03) 2px)'}}></div>
         </div>
 
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center text-cmh-cream">

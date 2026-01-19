@@ -56,7 +56,7 @@ export const ARTISTS: Artist[] = [
       artist: 'Ashley Wolfe',
       src: '/audio/ashley_whiskey-in-the-wound_audio.mp3',
       duration: '3:56',
-      coverArt: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1000&auto=format&fit=crop'
+      coverArt: '/images/covers/rust-bucket-glory.webp'
     }
   },
   {
@@ -70,7 +70,7 @@ export const ARTISTS: Artist[] = [
       artist: 'Belladonna Vale',
       src: '/audio/sunny_front-porch-sundays_audio.mp3',
       duration: '4:05',
-      coverArt: 'https://images.unsplash.com/photo-1514525253440-b393452e8d26?q=80&w=1000&auto=format&fit=crop'
+      coverArt: '/images/covers/after-the-applause.webp'
     }
   },
   {

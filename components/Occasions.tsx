@@ -55,13 +55,13 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                 </button>
             </div>
 
-            {/* Right Visuals */}
+            {/* Right Visuals - CSS gradient boxes */}
             <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=600&auto=format&fit=crop" className="rounded-sm translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage microphone" loading="lazy" width="600" height="400" />
-                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=600&auto=format&fit=crop" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Musician performing" loading="lazy" width="600" height="400" />
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Music writing" loading="lazy" width="600" height="400" />
-                    <img src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?q=80&w=600&auto=format&fit=crop" className="rounded-sm -translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Recording studio" loading="lazy" width="600" height="400" />
+                    <div className="rounded-sm translate-y-8 aspect-[3/2] bg-gradient-to-br from-cmh-sepia/30 to-cmh-mahogany/20 backdrop-blur-sm border border-cmh-gold/10"></div>
+                    <div className="rounded-sm aspect-[3/2] bg-gradient-to-br from-cmh-gold/20 to-cmh-sepia/30 backdrop-blur-sm border border-cmh-gold/10"></div>
+                    <div className="rounded-sm aspect-[3/2] bg-gradient-to-br from-cmh-mahogany/20 to-cmh-gold/20 backdrop-blur-sm border border-cmh-gold/10"></div>
+                    <div className="rounded-sm -translate-y-8 aspect-[3/2] bg-gradient-to-br from-cmh-sepia/20 to-cmh-mahogany/30 backdrop-blur-sm border border-cmh-gold/10"></div>
                 </div>
                 {/* Decorative border */}
                 <div className="absolute inset-0 border border-cmh-gold/20 m-4 pointer-events-none"></div>
