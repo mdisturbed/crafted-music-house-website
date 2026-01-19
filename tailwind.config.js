@@ -2,10 +2,21 @@
 export default {
   content: [
     "./index.html",
+    "./index.tsx",
+    "./App.tsx",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts,jsx,tsx}",
+    "./constants.tsx",
+    "./types.ts",
+  ],
+  safelist: [
+    {
+      pattern: /(bg|text|border)-(cmh)-(cream|mahogany|gold|sepia|midnight)/,
+    },
+    {
+      pattern: /(sm|md|lg|xl):(text|grid-cols|gap|px|py)-/,
+    },
   ],
   theme: {
     extend: {
