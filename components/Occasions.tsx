@@ -55,13 +55,13 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                 </button>
             </div>
 
-            {/* Right Visuals - gradient boxes */}
+            {/* Right Visuals */}
             <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-sm translate-y-8 aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.3), rgba(74, 44, 42, 0.2))'}}></div>
-                    <div className="rounded-sm aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(201, 162, 39, 0.2), rgba(212, 165, 116, 0.3))'}}></div>
-                    <div className="rounded-sm aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(74, 44, 42, 0.2), rgba(201, 162, 39, 0.2))'}}></div>
-                    <div className="rounded-sm -translate-y-8 aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.2), rgba(74, 44, 42, 0.3))'}}></div>
+                    <img src="/images/covers/rust-bucket-glory.webp" className="rounded-sm translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage music scene" loading="lazy" width="600" height="400" />
+                    <img src="/images/covers/coffee-in-the-clouds.webp" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Jazz atmosphere" loading="lazy" width="600" height="400" />
+                    <img src="/images/covers/skylarking-at-midnight.webp" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Musical moment" loading="lazy" width="600" height="400" />
+                    <img src="/images/covers/front-porch-sundays.webp" className="rounded-sm -translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage recording" loading="lazy" width="600" height="400" />
                 </div>
                 {/* Decorative border */}
                 <div className="absolute inset-0 border border-cmh-gold/20 m-4 pointer-events-none"></div>
