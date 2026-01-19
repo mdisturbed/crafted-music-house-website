@@ -2,25 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  /* Focus indicators for accessibility */
-  *:focus-visible {
-    outline: 2px solid #C9A227;
-    outline-offset: 2px;
-    border-radius: 2px;
-  }
+/* Focus indicators for accessibility */
+*:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 2px;
+}
 
-  button:focus-visible,
-  a:focus-visible {
-    outline: 2px solid #C9A227;
-    outline-offset: 3px;
-  }
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 3px;
+}
 
-  input:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    outline: 2px solid #C9A227;
-    outline-offset: 1px;
-    border-color: #C9A227;
-  }
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 1px;
+  border-color: #C9A227;
 }
