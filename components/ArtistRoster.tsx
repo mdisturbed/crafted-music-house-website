@@ -99,10 +99,15 @@ const ArtistRoster: React.FC<ArtistRosterProps> = ({ onPlayTrack, currentTrack, 
               >
                 {/* Image Container */}
                 <div className="absolute inset-0 h-3/5 overflow-hidden">
-                    <div 
-                    className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 sepia-[0.3] group-hover:sepia-0"
-                    style={{ backgroundImage: `url(${artist.avatar})` }}
-                    ></div>
+                    <img
+                      src={artist.avatar}
+                      alt={`${artist.name} - ${artist.genre} artist`}
+                      width={600}
+                      height={900}
+                      loading={artist.id === '1' || artist.id === '2' || artist.id === '3' || artist.id === '4' ? 'eager' : 'lazy'}
+                      fetchPriority={artist.id === '1' || artist.id === '2' || artist.id === '3' || artist.id === '4' ? 'high' : 'auto'}
+                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 sepia-[0.3] group-hover:sepia-0"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90"></div>
                     
                     {/* Exclusive Tag */}
