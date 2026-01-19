@@ -8,7 +8,7 @@ const PressKit: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
             <h1 className="text-5xl font-serif text-cmh-mahogany mb-4">Press Kit</h1>
-            <p className="text-cmh-mahogany/60">Assets and information for media and partners.</p>
+            <p className="text-cmh-mahogany/75">Assets and information for media and partners.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -46,7 +46,7 @@ const PressKit: React.FC = () => {
                             </span>
                         </div>
                     </div>
-                    <button className="flex items-center gap-2 text-cmh-mahogany/60 hover:text-cmh-gold text-sm">
+                    <button className="flex items-center gap-2 text-cmh-mahogany/75 hover:text-cmh-gold text-sm">
                         <Download size={16} /> Download Vector Pack (.EPS)
                     </button>
                 </div>
@@ -59,7 +59,7 @@ const PressKit: React.FC = () => {
                         <div className="aspect-square bg-gray-200"></div>
                         <div className="aspect-square bg-gray-200"></div>
                     </div>
-                    <button className="flex items-center gap-2 text-cmh-mahogany/60 hover:text-cmh-gold text-sm">
+                    <button className="flex items-center gap-2 text-cmh-mahogany/75 hover:text-cmh-gold text-sm">
                         <Camera size={16} /> Download High-Res Gallery
                     </button>
                 </div>

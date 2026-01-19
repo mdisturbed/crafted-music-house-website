@@ -83,7 +83,7 @@ const FullCatalog: React.FC<FullCatalogProps> = ({
           <div className="text-center md:text-left">
             <span className="text-cmh-gold font-sans text-sm tracking-widest uppercase mb-2 block">The Archives</span>
             <h1 className="text-5xl font-serif text-cmh-mahogany mb-4">Complete Discography</h1>
-            <p className="text-cmh-mahogany/60 max-w-2xl">Browse our entire collection of soulful, AI-assisted releases.</p>
+            <p className="text-cmh-mahogany/75 max-w-2xl">Browse our entire collection of soulful, AI-assisted releases.</p>
           </div>
           
           {isAdmin && (

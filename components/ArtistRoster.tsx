@@ -62,8 +62,8 @@ const ArtistRoster: React.FC<ArtistRosterProps> = ({ onPlayTrack, currentTrack, 
           <h2 className="text-4xl md:text-6xl font-serif text-cmh-mahogany mb-6">
             Meet the <span className="italic text-cmh-gold">Voices</span>
           </h2>
-          <p className="text-cmh-mahogany/60 max-w-2xl mx-auto font-light leading-relaxed mb-8">
-            From the jazz clubs of 1940s New Orleans to the swamps of the Deep South, 
+          <p className="text-cmh-mahogany/75 max-w-2xl mx-auto font-light leading-relaxed mb-8">
+            From the jazz clubs of 1940s New Orleans to the swamps of the Deep South,
             our personas span time and space to bring you authentic emotional experiences.
           </p>
 
@@ -74,9 +74,9 @@ const ArtistRoster: React.FC<ArtistRosterProps> = ({ onPlayTrack, currentTrack, 
                 key={vibe.id}
                 onClick={() => setActiveVibe(vibe.id)}
                 className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border ${
-                  activeVibe === vibe.id 
-                    ? 'bg-cmh-mahogany text-cmh-gold border-cmh-mahogany shadow-lg scale-105' 
-                    : 'bg-transparent text-cmh-mahogany/60 border-cmh-mahogany/20 hover:border-cmh-gold hover:text-cmh-gold'
+                  activeVibe === vibe.id
+                    ? 'bg-cmh-mahogany text-cmh-gold border-cmh-mahogany shadow-lg scale-105'
+                    : 'bg-transparent text-cmh-mahogany/75 border-cmh-mahogany/20 hover:border-cmh-gold hover:text-cmh-gold'
                 }`}
               >
                 {vibe.label}
@@ -114,9 +114,10 @@ const ArtistRoster: React.FC<ArtistRosterProps> = ({ onPlayTrack, currentTrack, 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-center">
                     {/* Floating Play Button */}
-                    <button 
+                    <button
                         onClick={(e) => handlePlayClick(e, artist.demoTrack)}
                         className={`mx-auto mb-4 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-md transform z-10 ${isArtistPlaying ? 'bg-cmh-gold scale-110' : 'bg-cmh-mahogany text-white translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'}`}
+                        aria-label={isArtistPlaying ? `Pause ${artist.name}` : `Play ${artist.name}`}
                     >
                         {isArtistPlaying ? <span className="animate-pulse w-3 h-3 bg-white rounded-full"></span> : <Play size={20} fill="currentColor" className="ml-1" />}
                     </button>
@@ -130,7 +131,7 @@ const ArtistRoster: React.FC<ArtistRosterProps> = ({ onPlayTrack, currentTrack, 
                       {artist.name}
                     </h3>
                     
-                    <p className="text-cmh-mahogany/60 text-sm line-clamp-3 leading-relaxed">
+                    <p className="text-cmh-mahogany/75 text-sm line-clamp-3 leading-relaxed">
                       {artist.description}
                     </p>
                   </div>

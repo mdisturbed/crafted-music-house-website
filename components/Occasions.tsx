@@ -32,7 +32,7 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                             <Heart className="text-cmh-gold" size={20} />
                         </div>
                         <div>
-                            <h4 className="font-serif text-xl mb-1 text-cmh-cream">Weddings & Anniversaries</h4>
+                            <p className="font-serif text-xl mb-1 text-cmh-cream font-semibold">Weddings & Anniversaries</p>
                             <p className="text-sm text-gray-400">Capture your love story in a soulful ballad by Ruby James or an intimate lounge track by Salvatore Moretti.</p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                             <Gift className="text-cmh-gold" size={20} />
                         </div>
                         <div>
-                            <h4 className="font-serif text-xl mb-1 text-cmh-cream">Birthdays & Retirements</h4>
+                            <p className="font-serif text-xl mb-1 text-cmh-cream font-semibold">Birthdays & Retirements</p>
                             <p className="text-sm text-gray-400">Celebrate milestones with a personalized upbeat jazz number from Sunny Boudreaux.</p>
                         </div>
                     </div>

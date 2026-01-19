@@ -208,7 +208,7 @@ const Inquiry: React.FC = () => {
 
                 <div className="pt-4 border-t border-cmh-gold/20 flex items-center justify-between">
                     <div>
-                        <span className="block text-xs font-bold uppercase tracking-widest text-cmh-mahogany/60">Estimated Total</span>
+                        <span className="block text-xs font-bold uppercase tracking-widest text-cmh-mahogany/75">Estimated Total</span>
                         <span className="text-3xl font-serif text-cmh-gold">${currentPrice}</span>
                     </div>
                     <Button type="submit" size="lg" className="gap-2">

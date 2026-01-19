@@ -159,9 +159,9 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb / Back */}
-        <button 
+        <button
           onClick={() => onNavigate('home')}
-          className="flex items-center gap-2 text-cmh-mahogany/60 hover:text-cmh-gold transition-colors mb-8 group"
+          className="flex items-center gap-2 text-cmh-mahogany/75 hover:text-cmh-gold transition-colors mb-8 group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform"/> Back to Roster
         </button>
@@ -332,7 +332,7 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
                                   <div className="mt-3 pl-2 border-l-2 border-cmh-gold/20">
                                     <div className="space-y-1">
                                       {release.tracks.map((track) => (
-                                        <div key={track.number} className="flex items-center gap-2 text-xs text-cmh-mahogany/60">
+                                        <div key={track.number} className="flex items-center gap-2 text-xs text-cmh-mahogany/75">
                                           <span className="text-cmh-gold/60 font-mono w-4">{track.number}.</span>
                                           <span className="flex-1">{track.title}</span>
                                           <span className="text-cmh-sepia/40 font-mono text-[10px]">{track.duration}</span>

@@ -59,7 +59,7 @@ const Reviews: React.FC = () => {
                     {review.name[0]}
                     </div>
                     <div>
-                    <h4 className="font-serif text-cmh-mahogany text-sm font-bold">{review.name}</h4>
+                    <p className="font-serif text-cmh-mahogany text-sm font-bold">{review.name}</p>
                     <p className="text-xs text-cmh-sepia uppercase tracking-wider">{review.role}</p>
                     </div>
                 </div>
