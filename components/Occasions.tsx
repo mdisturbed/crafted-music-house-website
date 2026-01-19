@@ -55,13 +55,37 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                 </button>
             </div>
 
-            {/* Right Visuals */}
+            {/* Right Visuals - Occasion themed patterns */}
             <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                    <img src="/images/covers/rust-bucket-glory.webp" className="rounded-sm translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage music scene" loading="lazy" width="600" height="400" />
-                    <img src="/images/covers/coffee-in-the-clouds.webp" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Jazz atmosphere" loading="lazy" width="600" height="400" />
-                    <img src="/images/covers/skylarking-at-midnight.webp" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-700" alt="Musical moment" loading="lazy" width="600" height="400" />
-                    <img src="/images/covers/front-porch-sundays.webp" className="rounded-sm -translate-y-8 grayscale hover:grayscale-0 transition-all duration-700" alt="Vintage recording" loading="lazy" width="600" height="400" />
+                    {/* Wedding/Romance theme */}
+                    <div className="rounded-sm translate-y-8 aspect-[3/2] border border-cmh-gold/30 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cmh-sepia/40 via-cmh-gold/20 to-cmh-mahogany/30"></div>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-40 group-hover:opacity-60 transition-opacity">
+                            <Heart size={80} className="text-cmh-gold" strokeWidth={1.5} />
+                        </div>
+                    </div>
+                    {/* Celebration theme */}
+                    <div className="rounded-sm aspect-[3/2] border border-cmh-gold/30 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cmh-gold/30 via-cmh-cream/10 to-cmh-sepia/40"></div>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-40 group-hover:opacity-60 transition-opacity">
+                            <Gift size={80} className="text-cmh-gold" strokeWidth={1.5} />
+                        </div>
+                    </div>
+                    {/* Musical moment theme */}
+                    <div className="rounded-sm aspect-[3/2] border border-cmh-gold/30 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cmh-mahogany/30 via-cmh-sepia/20 to-cmh-gold/30"></div>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-40 group-hover:opacity-60 transition-opacity">
+                            <Calendar size={80} className="text-cmh-gold" strokeWidth={1.5} />
+                        </div>
+                    </div>
+                    {/* Memory theme */}
+                    <div className="rounded-sm -translate-y-8 aspect-[3/2] border border-cmh-gold/30 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cmh-sepia/35 via-cmh-mahogany/25 to-cmh-gold/35"></div>
+                        <div className="absolute inset-0 flex items-center justify-center opacity-40 group-hover:opacity-60 transition-opacity">
+                            <Heart size={80} className="text-cmh-gold" strokeWidth={1.5} />
+                        </div>
+                    </div>
                 </div>
                 {/* Decorative border */}
                 <div className="absolute inset-0 border border-cmh-gold/20 m-4 pointer-events-none"></div>
