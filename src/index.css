@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-cmh-cream: #F5F0E6;
+  --color-cmh-mahogany: #4A2C2A;
+  --color-cmh-gold: #C9A227;
+  --color-cmh-sepia: #D4A574;
+  --color-cmh-midnight: #1A1A2E;
+
+  --font-family-sans: Inter, system-ui, sans-serif;
+  --font-family-serif: Playfair Display, Georgia, serif;
+  --font-family-display: Bebas Neue, Impact, sans-serif;
+}
+
+/* Focus indicators for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-cmh-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
