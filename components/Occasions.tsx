@@ -55,13 +55,13 @@ const Occasions: React.FC<OccasionsProps> = ({ onNavigate }) => {
                 </button>
             </div>
 
-            {/* Right Visuals - CSS gradient boxes */}
+            {/* Right Visuals - gradient boxes */}
             <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-sm translate-y-8 aspect-[3/2] bg-gradient-to-br from-cmh-sepia/30 to-cmh-mahogany/20 backdrop-blur-sm border border-cmh-gold/10"></div>
-                    <div className="rounded-sm aspect-[3/2] bg-gradient-to-br from-cmh-gold/20 to-cmh-sepia/30 backdrop-blur-sm border border-cmh-gold/10"></div>
-                    <div className="rounded-sm aspect-[3/2] bg-gradient-to-br from-cmh-mahogany/20 to-cmh-gold/20 backdrop-blur-sm border border-cmh-gold/10"></div>
-                    <div className="rounded-sm -translate-y-8 aspect-[3/2] bg-gradient-to-br from-cmh-sepia/20 to-cmh-mahogany/30 backdrop-blur-sm border border-cmh-gold/10"></div>
+                    <div className="rounded-sm translate-y-8 aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.3), rgba(74, 44, 42, 0.2))'}}></div>
+                    <div className="rounded-sm aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(201, 162, 39, 0.2), rgba(212, 165, 116, 0.3))'}}></div>
+                    <div className="rounded-sm aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(74, 44, 42, 0.2), rgba(201, 162, 39, 0.2))'}}></div>
+                    <div className="rounded-sm -translate-y-8 aspect-[3/2] border border-cmh-gold/10" style={{background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.2), rgba(74, 44, 42, 0.3))'}}></div>
                 </div>
                 {/* Decorative border */}
                 <div className="absolute inset-0 border border-cmh-gold/20 m-4 pointer-events-none"></div>

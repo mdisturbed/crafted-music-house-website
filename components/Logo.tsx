@@ -8,7 +8,7 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ className = "h-10 w-10" }) => {
   return (
     <img
-      src="/logo.png"
+      src="/logo-optimized.png"
       alt="Crafted Music House Logo"
       className={`${className} object-contain`}
       loading="eager"
