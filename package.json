@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && ./scripts/make-css-async.sh",
     "preview": "vite preview",
     "optimize-images": "node scripts/optimize-images.js"
   },

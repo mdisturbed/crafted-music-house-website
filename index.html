@@ -93,14 +93,22 @@
     <noscript><link rel="stylesheet" href="/fonts/fonts.css"></noscript>
 
     <style>
+      /* Critical CSS - above the fold */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
         background-color: #F5F0E6; /* cmh-cream */
         color: #4A2C2A; /* cmh-mahogany */
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', -apple-system, sans-serif;
         overflow-x: hidden;
+        line-height: 1.5;
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Playfair Display', serif;
+        line-height: 1.2;
+      }
+      /* Ensure skeleton is visible immediately */
+      #root > div {
+        opacity: 1 !important;
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
@@ -130,20 +138,20 @@
   <body>
     <div id="root">
       <!-- Static skeleton visible immediately while React loads -->
-      <div style="min-height: 100vh; background: #F5F0E6; position: relative;">
+      <div style="min-height: 100vh; background: #F5F0E6; position: relative; opacity: 1;">
         <!-- Hero Section Skeleton -->
-        <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 5rem;">
-          <div style="text-align: center; max-width: 1280px; padding: 1rem;">
+        <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 5rem; padding-bottom: 2rem;">
+          <div style="text-align: center; max-width: 1280px; padding: 1rem; width: 100%;">
             <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
               <div style="height: 1px; width: 3rem; background: #C9A227;"></div>
-              <span style="color: #C9A227; font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600;">EST. 2025</span>
+              <span style="color: #C9A227; font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; font-family: 'Inter', sans-serif;">EST. 2025</span>
               <div style="height: 1px; width: 3rem; background: #C9A227;"></div>
             </div>
-            <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); color: #4A2C2A; margin-bottom: 2rem; line-height: 1.2;">
+            <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.5rem, 7vw, 5rem); color: #4A2C2A; margin-bottom: 2rem; line-height: 1.2; font-weight: 500;">
               Soulful stories,<br>
               <span style="font-style: italic; color: #8B6F47;">crafted with care.</span>
             </h1>
-            <p style="color: rgba(74, 44, 42, 0.7); font-size: 1.25rem; margin-bottom: 3rem; max-width: 42rem; margin-left: auto; margin-right: auto; line-height: 1.75;">
+            <p style="color: rgba(74, 44, 42, 0.7); font-size: clamp(1rem, 2vw, 1.25rem); margin-bottom: 3rem; max-width: 42rem; margin-left: auto; margin-right: auto; line-height: 1.75; font-family: 'Inter', -apple-system, sans-serif;">
               An AI music production house bringing vintage jazz, blues, and Americana to life through distinct artist personas.
             </p>
           </div>
