@@ -165,24 +165,24 @@ export const RELEASES: Release[] = [
     title: 'After the Applause',
     artist: 'Salvatore Moretti',
     coverArt: '/images/covers/after-the-applause.webp',
-    year: '2025',
+    year: '2026',
     type: 'album',
     src: '/audio/salvatore_after-you-leave_audio.mp3',
     tracks: [
-      { number: 1, title: 'After You Leave', duration: '3:30' },
-      { number: 2, title: 'Selective Memory', duration: '3:45' },
-      { number: 3, title: 'One Call Away', duration: '3:30' },
-      { number: 4, title: 'What I Didn\'t Say', duration: '4:00' },
-      { number: 5, title: 'Bourbon at 3AM', duration: '3:45' },
-      { number: 6, title: 'Letting Go Was Love', duration: '3:30' },
-      { number: 7, title: 'The Last Song', duration: '4:15' },
-      { number: 8, title: 'Morning Arrives', duration: '3:30' },
-      { number: 9, title: 'Complete', duration: '3:45' },
-      { number: 10, title: 'What Remains', duration: '3:30' }
+      { number: 1, title: 'After You Leave', duration: '4:33' },
+      { number: 2, title: 'Selective Memory', duration: '5:11' },
+      { number: 3, title: 'One Call Away', duration: '4:27' },
+      { number: 4, title: 'What I Didn\'t Say', duration: '5:05' },
+      { number: 5, title: 'Bourbon at 3AM', duration: '4:39' },
+      { number: 6, title: 'Letting Go Was Love', duration: '5:14' },
+      { number: 7, title: 'The Last Song', duration: '4:38' },
+      { number: 8, title: 'Morning Arrives', duration: '4:54' },
+      { number: 9, title: 'Complete', duration: '4:53' },
+      { number: 10, title: 'What Remains', duration: '5:01' }
     ],
     links: {
-      spotify: '',
-      apple: '',
+      spotify: 'https://open.spotify.com/album/6D2hLi8ymRW4GVRjNX7aHo',
+      apple: 'https://music.apple.com/us/album/after-the-appluase/1869531102',
       amazon: '',
       youtube: ''
     }
