@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Star, UserPlus } from 'lucide-react';
+import { Send, Star, UserPlus, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -16,11 +16,13 @@ const Inquiry: React.FC = () => {
     customBackstory: '',
     details: ''
   });
-  
+
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
   // Pricing Constants
   const BASE_PRICE = 49;
   const CUSTOM_ARTIST_FEE = 50;
-  
+
   const currentPrice = formData.artistPreference === 'custom' ? BASE_PRICE + CUSTOM_ARTIST_FEE : BASE_PRICE;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -31,32 +33,49 @@ const Inquiry: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Construct Mailto Link
-    const subject = encodeURIComponent(`Inquiry: ${formData.occasion} - ${formData.name}`);
-    
-    let bodyText = `New Inquiry from ${formData.name}\n\n`;
-    bodyText += `Email: ${formData.email}\n`;
-    bodyText += `Occasion: ${formData.occasion}\n`;
-    bodyText += `Artist Preference: ${formData.artistPreference}\n`;
-    bodyText += `Estimated Price: $${currentPrice}\n\n`;
-    
-    if (formData.artistPreference === 'custom') {
-      bodyText += `--- CUSTOM PERSONA DETAILS ---\n`;
-      bodyText += `Name: ${formData.customPersonaName}\n`;
-      bodyText += `Genre: ${formData.customGenre}\n`;
-      bodyText += `Backstory: ${formData.customBackstory}\n\n`;
+    setStatus('submitting');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xaqqdrgb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          occasion: formData.occasion,
+          artistPreference: formData.artistPreference,
+          customPersonaName: formData.customPersonaName,
+          customGenre: formData.customGenre,
+          customBackstory: formData.customBackstory,
+          details: formData.details,
+          estimatedPrice: `$${currentPrice}`,
+          _subject: `Inquiry: ${formData.occasion} - ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          occasion: 'Wedding / Anniversary',
+          artistPreference: 'roster',
+          customPersonaName: '',
+          customGenre: '',
+          customBackstory: '',
+          details: ''
+        });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
     }
-    
-    bodyText += `--- STORY DETAILS ---\n`;
-    bodyText += `${formData.details}\n`;
-    
-    const body = encodeURIComponent(bodyText);
-    
-    // Open Email Client
-    window.location.href = `mailto:hello@craftedmusichouse.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -97,6 +116,28 @@ const Inquiry: React.FC = () => {
             {/* Right Column (Form) */}
             <div className="p-8 md:p-12 bg-gray-50/50">
             <form className="space-y-6" onSubmit={handleSubmit}>
+                {/* Success Message */}
+                {status === 'success' && (
+                  <div className="bg-green-50 border border-green-200 rounded-sm p-4 flex items-start gap-3">
+                    <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={20} />
+                    <div>
+                      <h4 className="font-bold text-green-900 mb-1">Request Submitted!</h4>
+                      <p className="text-sm text-green-800">Thank you for your inquiry. We'll be in touch within 24 hours to discuss your custom song.</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {status === 'error' && (
+                  <div className="bg-red-50 border border-red-200 rounded-sm p-4 flex items-start gap-3">
+                    <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} />
+                    <div>
+                      <h4 className="font-bold text-red-900 mb-1">Submission Failed</h4>
+                      <p className="text-sm text-red-800">Something went wrong. Please try again or email us directly at hello@craftedmusichouse.com</p>
+                    </div>
+                  </div>
+                )}
+
                 <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-widest text-cmh-mahogany">Name</label>
                     <Input 
@@ -211,8 +252,8 @@ const Inquiry: React.FC = () => {
                         <span className="block text-xs font-bold uppercase tracking-widest text-cmh-mahogany/75">Estimated Total</span>
                         <span className="text-3xl font-serif text-cmh-gold">${currentPrice}</span>
                     </div>
-                    <Button type="submit" size="lg" className="gap-2">
-                        Submit Request <Send size={16} />
+                    <Button type="submit" size="lg" className="gap-2" disabled={status === 'submitting'}>
+                        {status === 'submitting' ? 'Sending...' : 'Submit Request'} <Send size={16} />
                     </Button>
                 </div>
             </form>
